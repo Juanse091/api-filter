@@ -8,9 +8,9 @@ export class CardModel {
       sale = sale.toLowerCase() === 'true'
     }
     if (sortOrder === 'asc') {
-      cards.sort((a, b) => a.price - b.price) // Orden ascendente
+      cards.sort((a, b) => a.price - b.price)
     } else if (sortOrder === 'desc') {
-      cards.sort((a, b) => b.price - a.price) // Orden descendente
+      cards.sort((a, b) => b.price - a.price)
     }
 
     cards = cards.filter(card => {

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ?minPrice=150000&maxPrice=4000000&type=weapon&sale=true -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        fetch('https://api-filter-dev-zpeb.4.us-1.fl0.io/cards')
+            .then(res => res.json())
+            .then(cards => {
+                const html = movies.map(card => {
+                    return `
+                    <article data-id="${card.id}">
+                        <h2>${card.name}</h2>
+                        <p>${card.type }</p>
+                        <p>${card.price }</p>
+                        <p>${card.sale }</p>
+                    </article>
+                    `
+                }).join('')
+
+                document.querySelector('main').innerHTML = html
+            })
+    </script>
+</head>
+<body>
+    <main></main>
+</body>
+</html>

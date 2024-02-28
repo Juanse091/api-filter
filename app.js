@@ -1,7 +1,9 @@
+import cors from 'cors'
 import express, { json } from 'express'
 import { cardsRouter } from './routes/cards.js'
 
 const app = express()
+app.use(cors())
 app.set('view engine', 'ejs')
 app.use(json())
 app.disable('x-powered-by') // Deshabilitar el header x-powered-by
