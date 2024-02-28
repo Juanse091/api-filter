@@ -3,9 +3,9 @@ import { cardsRouter } from './routes/cards.js'
 import { corsMiddleware } from './middleware/cors.js'
 
 const app = express()
-app.use(corsMiddleware)
 app.set('view engine', 'ejs')
 app.use(json())
+app.use(corsMiddleware)
 app.disable('x-powered-by') // Deshabilitar el header x-powered-by
 
 app.use('/cards', cardsRouter) // <-- Todos los recuross que sean CARDS se identifcan con /cards
