@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="module">
-        fetch('https://api-filter-dev-zpeb.4.us-1.fl0.io/cards')
+        fetch('http://localhost:3000/cards')
             .then(res => res.json())
             .then(cards => {
-                const html = movies.map(card => {
+                const html = cards.map(card => {
                     return `
                     <article data-id="${card.id}">
                         <h2>${card.name}</h2>
