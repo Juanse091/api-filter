@@ -1,0 +1,11 @@
+### 
+GET http://localhost:3000/cards
+
+
+#### Filtrado Unitario // Items - Weapon - Armor - Epic
+GET http://localhost:3000/cards?minPrice=150000&maxPrice=4000000&type=Item&sale=true&sortOrder=desc
+
+#### Filtrado
+
+GET http://localhost:3000/cards?sortOrder=asc
+
